@@ -11,7 +11,7 @@
         <h1>Create <br> <span>Random Password</span> </h1>
         <div class="display">
             <input type="text" id="password" placeholder="password">
-            <img src="images/copy.png " alt="">
+            <img src="images/copy.png " alt="" onclick="copyPassword()">
         </div>
         <button onclick="createPassword()"><img src="images/generate.png" alt="">Generate Password</button>
     </div>
@@ -33,6 +33,11 @@
             passwordBox.value = pass;
         }
         const generateBtn= document.querySelector('button');
+        function copyPassword(){
+            passwordBox.select();
+            document.execCommand('copy');
+            alert('Password copied to clipboard');
+        }
     </script>
 </body>
 </html>
