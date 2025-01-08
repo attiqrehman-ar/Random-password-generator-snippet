@@ -37,3 +37,13 @@ color: white;
 
 }
 
+.display input{
+    border: 0;
+    outline: 0;
+    font-size: 24px;
+
+}
+.display img{
+    width: 30px;
+    cursor: pointer;
+}
