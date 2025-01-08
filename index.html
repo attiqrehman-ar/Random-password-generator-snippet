@@ -13,7 +13,26 @@
             <input type="text" id="password" placeholder="password">
             <img src="images/copy.png " alt="">
         </div>
-        <button><img src="images/generate.png" alt="">Generate Password</button>
+        <button onclick="createPassword()"><img src="images/generate.png" alt="">Generate Password</button>
     </div>
+    <script>
+        const passwordBox= document.getElementById('password');
+        const lenght = 12;
+        const upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        const lowerCase = 'abcdefghijklmnopqrstuvwxyz';
+        const numbers = '0123456789';
+        const symbols = '@#$%&';
+        function createPassword(){
+            let pass = '';
+            for(let i=0; i<lenght; i++){
+                pass += upperCase[Math.floor(Math.random() * upperCase.length)];
+                pass += lowerCase[Math.floor(Math.random() * lowerCase.length)];
+                pass += numbers[Math.floor(Math.random() * numbers.length)];
+                pass += symbols[Math.floor(Math.random() * symbols.length)];
+            }
+            passwordBox.value = pass;
+        }
+        const generateBtn= document.querySelector('button');
+    </script>
 </body>
 </html>
